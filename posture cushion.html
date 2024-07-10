@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Cushion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .pc-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+            overflow: hidden;
+        }
+
+        .pc-headline, .pc-subheadline, .pc-cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pc-headline {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .pc-subheadline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #16a085;
+        }
+
+        .pc-cta button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pc-cta button:hover {
+            background-color: #16a085;
+            transform: translateY(-3px);
+        }
+
+        .pc-section {
+            margin: 50px 0;
+        }
+
+        .pc-section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2980b9;
+            text-align: center;
+            position: relative;
+        }
+
+        .pc-section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #1abc9c;
+            margin: 10px auto;
+        }
+
+        .pc-section-content {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .pc-section-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pc-section-content ul li {
+            padding-left: 1.5em;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .pc-section-content ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #1abc9c;
+        }
+
+        .pc-testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pc-testimonial {
+            margin: 10px 0;
+            font-style: italic;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pc-testimonial:hover {
+            transform: scale(1.02);
+        }
+
+        .pc-about, .pc-contact {
+            text-align: center;
+        }
+
+        .pc-footer {
+            text-align: center;
+            padding: 20px;
+            background: #c31111;
+            color: white;
+        }
+
+        .pc-footer a {
+            color: #1abc9c;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .pc-footer a:hover {
+            color: #16a085;
+        }
+
+        .pc-footer p {
+            margin: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .pc-container {
+                padding: 15px;
+            }
+
+            .pc-headline {
+                font-size: 2em;
+            }
+
+            .pc-subheadline {
+                font-size: 1.2em;
+            }
+
+            .pc-cta button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+
+            .pc-section-title {
+                font-size: 1.8em;
+            }
+
+            .pc-section-content {
+                font-size: 1em;
+            }
+
+            .pc-testimonial {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pc-container">
+        <div class="pc-headline">Transform Your Child’s Posture with Our Innovative Cushion</div>
+        <div class="pc-subheadline">Designed for children aged 3 to 7 years, our patented cushion promotes healthy sitting habits.</div>
+        <div class="pc-cta"><button>Pre-Order Now</button></div>
+
+        <div class="pc-section">
+            <div class="pc-section-title">Why Choose Innomitra's Posture Cushion?</div>
+            <div class="pc-section-content">
+                In an age where children are increasingly drawn to screens, maintaining proper posture is more important than ever. Our posture cushion is a revolutionary product designed specifically for young children to help them sit upright and reverse the effects of spinal decline. Here’s why our cushion stands out:
+                <ul>
+                    <li><strong>Patented Design:</strong> Our unique design is scientifically engineered to support your child's spine and encourage healthy sitting habits.</li>
+                    <li><strong>Comfort and Durability:</strong> Made with high-quality, child-safe materials, our cushion provides the perfect blend of comfort and durability.</li>
+                    <li><strong>Promotes Healthy Growth:</strong> Regular use of our cushion can help prevent poor posture-related issues and promote proper spinal alignment.</li>
+                    <li><strong>Age-Appropriate:</strong> Ideal for children aged 3 to 7 years, ensuring they get the support they need during crucial developmental stages.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pc-section">
+            <div class="pc-section-title">Key Features</div>
+            <div class="pc-section-content">
+                <ul>
+                    <li><strong>Ergonomic Design:</strong> Contoured to fit a child’s body perfectly.</li>
+                    <li><strong>Lightweight and Portable:</strong> Easy to carry and use anywhere.</li>
+                    <li><strong>Non-Slip Base:</strong> Ensures the cushion stays in place.</li>
+                    <li><strong>Easy to Clean:</strong> Removable, washable cover for convenience.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pc-section">
+            <div class="pc-section-title">Health Benefits</div>
+            <div class="pc-section-content">
+                <ul>
+                    <li><strong>Improves Posture:</strong> Encourages proper spinal alignment.</li>
+                    <li><strong>Reduces Strain:</strong> Minimizes stress on the back and neck.</li>
+                    <li><strong>Enhances Focus:</strong> Helps children sit comfortably, improving concentration during activities like reading and homework.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pc-section pc-testimonials">
+            <div class="pc-section-title">What Parents Are Saying</div>
+            <div class="pc-section-content">
+                <div class="pc-testimonial">"My child loves the cushion! It's comfortable and has really helped improve her posture." – Ananya, Mother of a 5-year-old</div>
+                <div class="pc-testimonial">"A great product for young kids. I noticed a difference in my son's sitting habits within a few weeks." – Ravi, Father of a 6-year-old</div>
+            </div>
+        </div>
+
+        <div class="pc-section">
+            <div class="pc-section-title">Pre-Order Now and Save!</div>
+            <div class="pc-section-content">
+                Be one of the first to experience the benefits of our posture cushion. Pre-order now at a special introductory price of 600 INR (MRP: 900 INR). Limited stock available!
+            </div>
+            <div class="pc-cta"><button>Pre-Order Now</button></div>
+        </div>
+
+        <div class="pc-section pc-about">
+            <div class="pc-section-title">About InnoPhyzio</div>
+            <div class="pc-section-content">
+                At InnoPhyzio, we are committed to enhancing the health and well-being of children through innovative products. Our team of experts in child health and ergonomics has worked tirelessly to create solutions that support healthy growth and development.
+            </div>
+        </div>
+
+        <div class="pc-section pc-contact">
+            <div class="pc-section-title">Get in Touch</div>
+            <div class="pc-section-content">
+                For more information or inquiries, please contact us at:<br>
+                Email: info@innophyzio.com<br>
+                Phone: +91-9893301705<br>
+                Address: <br>
+            </div>
+        </div>
+
+        <div class="pc-footer">
+            <a href="https://www.facebook.com/innophyzio/">Facebook</a> | <a href="https://www.instagram.com/innophyzio/?hl=en">Instagram</a> |<br>
+            <p>© 2024 InnoPhyzio. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

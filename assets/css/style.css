@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .white-bg {
     background: #ffffff
@@ -7141,5 +7142,23 @@ del {
             }
         }
 /* About Image Container */
+        .marquee-container {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
 
-  
+        .marquee {
+            font-size: 36px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: linear-gradient(90deg, #08b8b8, #1317e2);
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            text-decoration: none; /* Ensure the text has no underline */
+        }

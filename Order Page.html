@@ -6,95 +6,101 @@
     <title>Order Booking Form</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #ffffff 0%, #1cb5db 100%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
-}
-.container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-.form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.form-group label {
-    width: 100%;
-    margin-bottom: 5px;
-    color: #666;
-}
-.form-group input, .form-group select {
-    width: calc(50% - 10px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    background-color: #fff;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, border-color 0.3s;
-    box-sizing: border-box;
-}
-.form-group input.full-width, .form-group select.full-width {
-    width: 100%;
-}
-.form-group input:hover, .form-group select:hover {
-    background-color: #f0f0f0;
-}
-.form-group input:focus, .form-group select:focus {
-    border-color: #00e5ff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-}
-.btn-submit {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(120deg, #106de0 0%, #0dcef0 100%);
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn-submit:hover {
-    background: linear-gradient(120deg, #dc112c 0%, #cc12aa 100%);
-}
-
-@media (max-width: 768px) {
-    .form-group input, .form-group select {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-@media (max-width: 480px) {
-    .container {
-        padding: 15px 20px;
-    }
-    .form-group input, .form-group select {
-        padding: 8px;
-    }
-    .btn-submit {
-        padding: 8px;
-        font-size: 14px;
-    }
-}
-
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ffffff 0%, #1cb5db 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-group label {
+            width: 100%;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #fff;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .form-group input:hover, .form-group select:hover {
+            background-color: #f0f0f0;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #00e5ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(120deg, #106de0 0%, #0dcef0 100%);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background: linear-gradient(120deg, #dc112c 0%, #cc12aa 100%);
+        }
+        .form-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-column {
+            width: calc(50% - 10px);
+        }
+        .full-width {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .form-column {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px 20px;
+            }
+            .form-group input, .form-group select {
+                padding: 8px;
+            }
+            .btn-submit {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,74 +108,90 @@
 <div class="container">
     <h1>Order Booking Form</h1>
     <form action="https://formspree.io/f/mkgwwzrk" method="post" onsubmit="return validateForm()">
-        <div class="form-group">
-            <label for="parent-name">Parent Name</label>
-            <input type="text" id="parent-name" name="parent_name" class="full-width" required>
-        </div>
-        <div class="form-group">
-            <label for="child-age">Child Age</label>
-            <input type="text" id="child-age" name="child_age" pattern="\d+" title="Enter a valid age" required>
-            <label for="child-gender">Child Gender</label>
-            <select id="child-gender" name="child_gender" required>
-                <option value="">Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
-            <label for="email">Email Id</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" required>
-            <label for="pincode">Pincode</label>
-            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" title="Enter a valid 6-digit pincode" required>
-        </div>
-        <div class="form-group">
-            <label for="landmark">Nearby Landmark</label>
-            <input type="text" id="landmark" name="landmark" required>
-            <label for="state">State</label>
-            <select id="state" name="state" required>
-                <option value="">Select State</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Odisha">Odisha</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-                <option value="West Bengal">West Bengal</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
-            <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="parent-name">Parent Name</label>
+                    <input type="text" id="parent-name" name="parent_name" class="full-width" required>
+                </div>
+                <div class="form-group">
+                    <label for="child-age">Child Age</label>
+                    <input type="text" id="child-age" name="child_age" pattern="\d+" title="Enter a valid age" required>
+                </div>
+                <div class="form-group">
+                    <label for="child-gender">Child Gender</label>
+                    <select id="child-gender" name="child_gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Id</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" title="Enter a valid 6-digit pincode" required>
+                </div>
+                <div class="form-group">
+                    <label for="landmark">Nearby Landmark</label>
+                    <input type="text" id="landmark" name="landmark" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+            </div>
         </div>
         <button type="submit" class="btn-submit">Send Order</button>
     </form>
